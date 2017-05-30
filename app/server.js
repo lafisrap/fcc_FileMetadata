@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
 });
 
 app.put('/upload', upload.single('file'), function (req, res, next) {
-  console.log(req);
+  console.log(req.file, req.body);
   // req.file is the `avatar` file 
   // req.body will hold the text fields, if there were any 
   res.json({filesize:100});
