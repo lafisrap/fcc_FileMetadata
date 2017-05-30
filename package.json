@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
-    "flickr-sdk": "^2.1.0",
-    "google-images": "^2.1.0"
+    "multer": "^1.3.0"
   }
 }
