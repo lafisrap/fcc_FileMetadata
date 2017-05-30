@@ -5,6 +5,12 @@ var express = require("express"),
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.post('/upload', upload.single('file'), function (req, res, next) {
   console.log(req);
   // req.file is the `avatar` file 
